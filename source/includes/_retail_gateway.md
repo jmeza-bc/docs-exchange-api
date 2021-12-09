@@ -25,7 +25,7 @@ Each type of data is provided over a dedicated channel. Clients need to subscrib
 from websocket import create_connection
 options = {}
 options['origin'] = 'https://exchange.blockchain.com'
-url = "wss://ws.prod.blockchain.info/mercury-gateway/v1/ws"
+url = "wss://ws.blockchain.info/mercury-gateway/v1/ws"
 ws = create_connection(url, **options)
 msg = '{"token": "{API_SECRET}", "action": "subscribe", "channel": "auth"}'
 ws.send(msg)
@@ -48,7 +48,7 @@ The websocket endpoint is,
 
 | Environment | URI                                                   |
 | ----------- | ----------------------------------------------------- |
-| prod        | `wss://ws.prod.blockchain.info/mercury-gateway/v1/ws` |
+| prod        | `wss://ws.blockchain.info/mercury-gateway/v1/ws` |
 
 In order to connect you have to add the following headers to the connection request
 
