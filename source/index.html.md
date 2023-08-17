@@ -8,10 +8,11 @@ toc_footers:
   - <a href='https://exchange.blockchain.com/trade/login'>Blockchain.com Exchange</a>
 
 includes:
-  - retail_gateway
-  - anonymous_channels
-  - auth_channels
-  - rest_endpoints
+  - introduction
+  - generating_api_keys
+  - rest_api
+  - rest_api_v2
+  - websocket_api
 
 search: true
 ---
