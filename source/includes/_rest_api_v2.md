@@ -2,29 +2,7 @@
 
 ## Overview
 
-**Connection**
-
-Currently available environments are:
-
-| Environment | URI                          |
-|-------------|------------------------------|
-| dev         | `http://10.103.50.44:8000`   |
-
-<aside class="notice">
-Note that for <code>POST</code> requests, parameters are passed in a JSON body, while for <code>GET</code> and <code>DELETE</code> these are placed in the query string.
-</aside>
-
-**Authentication**
-
-Having [generated your API credentials](#generating-api-keys), attach your secret key in a `X-BCX-APIKEY` header for any authenticated request.
-
-## Authenticated endpoints
-
-### Send order
-
-Sends in a new order.
-
-> Example request
+> Example response & request cycle
 
 ```python
 import requests
@@ -51,6 +29,42 @@ response = requests.request(
         "X-BCX-APIKEY": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiODE4ZDkzMjEtMGM4ZC00MmQzLTgzM2QtZjA3YTcyMDk4M2QyIiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6ZmFsc2UsImlhdCI6MTY4MzA0NDkzOSwianRpIjoiNDhiZDAyZjMtMzk2Ni00MjlhLWI3NmQtMzQwYTY3ZTZmMzkwIiwic2VxIjoxMDIxNDY2MCwid2RsIjp0cnVlfQ.H3weH51EfqRvnyR3Z/LsYtfsHIZQ14LORs8MSG+fEALPBcHD/A3Ie6b21fcURkEM8aidVCpYP/4HTdFMFPPcuZc="
     },
 )
+```
+
+**Connection**
+
+Currently available environments are:
+
+| Environment | URI                          |
+|-------------|------------------------------|
+| dev         | `http://10.103.50.44:8000`   |
+
+<aside class="notice">
+Note that for <code>POST</code> requests, parameters are passed in a JSON body, while for <code>GET</code> and <code>DELETE</code> these are placed in the query string.
+</aside>
+
+**Authentication**
+
+Having [generated your API credentials](#generating-api-keys), attach your secret key in a `X-BCX-APIKEY` header for any authenticated request.
+
+## Authenticated endpoints
+
+### Send order
+
+Sends in a new order.
+
+> Example request
+
+```json
+{
+  "symbol": "BTC-USD",
+  "side": "BUY",
+  "PRICE": 20000,
+  "quantity": "0.001",
+  "ordType": "LIMIT",
+  "timeInForce": "GTC",
+  "clOrdId": "",
+}
 ```
 
 > Example response
@@ -90,7 +104,7 @@ response = requests.request(
 | quantity                | string | True     |
 | timeInForce             | string | True     | `GTC`, `IOC`, `FOK`, `GTD`                                         |
 | selfTakerPreventionMode | string | False    | `EXPIRE_TAKER`, `EXPIRE_MAKER`, `EXPIRE_BOTH`, `DECREMENT`, `NONE` |
-| clOrdId                 | string | False    |
+| clOrdId                 | string | False    | If not present, will be automatically generated
 
 Possible values for `ordType` are explained below:
 
@@ -126,28 +140,13 @@ Where an "X" denotes support.
 
 > Example request
 
-```python
-import requests
-
-base_url = "http://10.103.50.44:8000"
-
-method = "POST"
-
-path = "/public/exchange/v4/authenticated/cancel"
-
-response = requests.request(
-    method,
-    base_url + path,
-    data={
-        "symbol": "BTC-USD",
-        "orderId": "288654242809",
-        "origClientOrderId": "1691675705931441",
-        "clOrdId": "1691675705931441",
-    },
-    headers={
-        "X-BCX-APIKEY": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiODE4ZDkzMjEtMGM4ZC00MmQzLTgzM2QtZjA3YTcyMDk4M2QyIiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6ZmFsc2UsImlhdCI6MTY4MzA0NDkzOSwianRpIjoiNDhiZDAyZjMtMzk2Ni00MjlhLWI3NmQtMzQwYTY3ZTZmMzkwIiwic2VxIjoxMDIxNDY2MCwid2RsIjp0cnVlfQ.H3weH51EfqRvnyR3Z/LsYtfsHIZQ14LORs8MSG+fEALPBcHD/A3Ie6b21fcURkEM8aidVCpYP/4HTdFMFPPcuZc="
-    },
-)
+```json
+{
+  "symbol": "BTC-USD",
+  "orderId": "288654242809",
+  "origClientOrderId": "1691675705931441",
+  "clOrdId": "1691675705931441",
+}
 ```
 
 > Example response
@@ -172,7 +171,7 @@ response = requests.request(
 }
 ```
 
-Cancels an open order.
+Cancels an open order. It will return the cancelled order.
 
 **HTTP Request**
 
@@ -188,26 +187,6 @@ Cancels an open order.
 | clOrdId           | string | True     |                                       |
 
 ### Cancel all orders
-
-> Example request
-
-```python
-import requests
-
-base_url = "http://10.103.50.44:8000"
-
-method = "POST"
-
-path = "/public/exchange/v4/authenticated/cancelAll"
-
-response = requests.request(
-    method,
-    base_url + path,
-    headers={
-        "X-BCX-APIKEY": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiODE4ZDkzMjEtMGM4ZC00MmQzLTgzM2QtZjA3YTcyMDk4M2QyIiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6ZmFsc2UsImlhdCI6MTY4MzA0NDkzOSwianRpIjoiNDhiZDAyZjMtMzk2Ni00MjlhLWI3NmQtMzQwYTY3ZTZmMzkwIiwic2VxIjoxMDIxNDY2MCwid2RsIjp0cnVlfQ.H3weH51EfqRvnyR3Z/LsYtfsHIZQ14LORs8MSG+fEALPBcHD/A3Ie6b21fcURkEM8aidVCpYP/4HTdFMFPPcuZc="
-    },
-)
-```
 
 > Example response
 
@@ -236,7 +215,7 @@ response = requests.request(
 }
 ```
 
-Cancels all open orders.
+Cancels all open orders. It will return an array of all orders cancelled.
 
 **HTTP Request**
 
