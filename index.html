@@ -224,9 +224,95 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#generating-api-keys" class="toc-h1 toc-link" data-title="Generating API keys">Generating API keys</a>
+          </li>
+          <li>
+            <a href="#rest-api" class="toc-h1 toc-link" data-title="REST API">REST API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#to-get-started" class="toc-h2 toc-link" data-title="To Get Started">To Get Started</a>
+                    <a href="#rest-api-overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#rest-api-anonymous-endpoints" class="toc-h2 toc-link" data-title="Anonymous Endpoints">Anonymous Endpoints</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#rest-api-anonymous-endpoints-get-symbols" class="toc-h3 toc-link" data-title="Get Symbols">Get Symbols</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-anonymous-endpoints-get-symbol" class="toc-h3 toc-link" data-title="Get Symbol">Get Symbol</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-anonymous-endpoints-get-l2-orderbook" class="toc-h3 toc-link" data-title="Get L2 Orderbook">Get L2 Orderbook</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-anonymous-endpoints-get-l3-orderbook" class="toc-h3 toc-link" data-title="Get L3 Orderbook">Get L3 Orderbook</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-anonymous-endpoints-get-tickers" class="toc-h3 toc-link" data-title="Get Tickers">Get Tickers</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-anonymous-endpoints-get-ticker" class="toc-h3 toc-link" data-title="Get Ticker">Get Ticker</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#rest-api-authenticated-endpoints" class="toc-h2 toc-link" data-title="Authenticated Endpoints">Authenticated Endpoints</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-place-order" class="toc-h3 toc-link" data-title="Place order">Place order</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-cancel-order" class="toc-h3 toc-link" data-title="Cancel order">Cancel order</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-cancel-all-orders" class="toc-h3 toc-link" data-title="Cancel all orders">Cancel all orders</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-get-order" class="toc-h3 toc-link" data-title="Get order">Get order</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-get-all-orders" class="toc-h3 toc-link" data-title="Get all orders">Get all orders</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-get-all-orders-from-the-matching-engine" class="toc-h3 toc-link" data-title="Get all orders (from the matching engine)">Get all orders (from the matching engine)</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-get-trades" class="toc-h3 toc-link" data-title="Get trades">Get trades</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-get-fills" class="toc-h3 toc-link" data-title="Get fills">Get fills</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-authenticated-endpoints-get-fee-level" class="toc-h3 toc-link" data-title="Get fee level">Get fee level</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rest-api-v2" class="toc-h1 toc-link" data-title="REST API V2">REST API V2</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#rest-api-v2-overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#rest-api-v2-authenticated-endpoints" class="toc-h2 toc-link" data-title="Authenticated endpoints">Authenticated endpoints</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#rest-api-v2-authenticated-endpoints-send-order" class="toc-h3 toc-link" data-title="Send order">Send order</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-v2-authenticated-endpoints-get-all-orders" class="toc-h3 toc-link" data-title="Get all orders">Get all orders</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-v2-authenticated-endpoints-cancel-order" class="toc-h3 toc-link" data-title="Cancel order">Cancel order</a>
+                          </li>
+                          <li>
+                            <a href="#rest-api-v2-authenticated-endpoints-cancel-all-orders" class="toc-h3 toc-link" data-title="Cancel all orders">Cancel all orders</a>
+                          </li>
+                      </ul>
                   </li>
               </ul>
           </li>
@@ -234,131 +320,122 @@
             <a href="#websocket-api" class="toc-h1 toc-link" data-title="Websocket API">Websocket API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
-                  </li>
-                  <li>
-                    <a href="#connection" class="toc-h2 toc-link" data-title="Connection">Connection</a>
-                  </li>
-                  <li>
-                    <a href="#requests" class="toc-h2 toc-link" data-title="Requests">Requests</a>
+                    <a href="#websocket-api-overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
                       <ul class="toc-list-h3">
                           <li>
-                            <a href="#channel" class="toc-h3 toc-link" data-title="Channel">Channel</a>
+                            <a href="#websocket-api-overview-authentication" class="toc-h3 toc-link" data-title="Authentication">Authentication</a>
                           </li>
                           <li>
-                            <a href="#action" class="toc-h3 toc-link" data-title="Action">Action</a>
+                            <a href="#websocket-api-overview-connection" class="toc-h3 toc-link" data-title="Connection">Connection</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-overview-requests" class="toc-h3 toc-link" data-title="Requests">Requests</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#websocket-api-overview-requests-channel" class="toc-h4 toc-link" data-title="Channel">Channel</a>
+                                  </li>
+                                  <li>
+                                    <a href="#websocket-api-overview-requests-action" class="toc-h4 toc-link" data-title="Action">Action</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-overview-response" class="toc-h3 toc-link" data-title="Response">Response</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#websocket-api-overview-response-sequence-numbers" class="toc-h4 toc-link" data-title="Sequence Numbers">Sequence Numbers</a>
+                                  </li>
+                                  <li>
+                                    <a href="#websocket-api-overview-response-event" class="toc-h4 toc-link" data-title="Event">Event</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-overview-data-types" class="toc-h3 toc-link" data-title="Data Types">Data Types</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-overview-fair-usage-and-rate-limits" class="toc-h3 toc-link" data-title="Fair usage and rate limits">Fair usage and rate limits</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-overview-response-data-throttling-and-delays" class="toc-h3 toc-link" data-title="Response data throttling and delays">Response data throttling and delays</a>
                           </li>
                       </ul>
                   </li>
                   <li>
-                    <a href="#response" class="toc-h2 toc-link" data-title="Response">Response</a>
+                    <a href="#websocket-api-anonymous-channels" class="toc-h2 toc-link" data-title="Anonymous Channels">Anonymous Channels</a>
                       <ul class="toc-list-h3">
                           <li>
-                            <a href="#sequence-numbers" class="toc-h3 toc-link" data-title="Sequence Numbers">Sequence Numbers</a>
+                            <a href="#websocket-api-anonymous-channels-heartbeat" class="toc-h3 toc-link" data-title="Heartbeat">Heartbeat</a>
                           </li>
                           <li>
-                            <a href="#event" class="toc-h3 toc-link" data-title="Event">Event</a>
+                            <a href="#websocket-api-anonymous-channels-l2-order-book" class="toc-h3 toc-link" data-title="L2 Order Book">L2 Order Book</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-anonymous-channels-l3-order-book" class="toc-h3 toc-link" data-title="L3 Order Book">L3 Order Book</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-anonymous-channels-prices" class="toc-h3 toc-link" data-title="Prices">Prices</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-anonymous-channels-symbols" class="toc-h3 toc-link" data-title="Symbols">Symbols</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#websocket-api-anonymous-channels-symbols-field-description" class="toc-h4 toc-link" data-title="Field Description">Field Description</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-anonymous-channels-ticker" class="toc-h3 toc-link" data-title="Ticker">Ticker</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-anonymous-channels-trades" class="toc-h3 toc-link" data-title="Trades">Trades</a>
                           </li>
                       </ul>
                   </li>
                   <li>
-                    <a href="#data-types" class="toc-h2 toc-link" data-title="Data Types">Data Types</a>
-                  </li>
-                  <li>
-                    <a href="#fair-usage-and-rate-limits" class="toc-h2 toc-link" data-title="Fair usage and rate limits">Fair usage and rate limits</a>
-                  </li>
-                  <li>
-                    <a href="#response-data-throttling-and-delays" class="toc-h2 toc-link" data-title="Response data throttling and delays">Response data throttling and delays</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#anonymous-channels" class="toc-h1 toc-link" data-title="Anonymous Channels">Anonymous Channels</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#heartbeat" class="toc-h2 toc-link" data-title="Heartbeat">Heartbeat</a>
-                  </li>
-                  <li>
-                    <a href="#l2-order-book" class="toc-h2 toc-link" data-title="L2 Order Book">L2 Order Book</a>
-                  </li>
-                  <li>
-                    <a href="#l3-order-book" class="toc-h2 toc-link" data-title="L3 Order Book">L3 Order Book</a>
-                  </li>
-                  <li>
-                    <a href="#prices" class="toc-h2 toc-link" data-title="Prices">Prices</a>
-                  </li>
-                  <li>
-                    <a href="#symbols" class="toc-h2 toc-link" data-title="Symbols">Symbols</a>
+                    <a href="#websocket-api-authenticated-channels" class="toc-h2 toc-link" data-title="Authenticated Channels">Authenticated Channels</a>
                       <ul class="toc-list-h3">
                           <li>
-                            <a href="#field-description" class="toc-h3 toc-link" data-title="Field Description">Field Description</a>
+                            <a href="#websocket-api-authenticated-channels-authenticated" class="toc-h3 toc-link" data-title="Authenticated">Authenticated</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-authenticated-channels-trading" class="toc-h3 toc-link" data-title="Trading">Trading</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#websocket-api-authenticated-channels-trading-state" class="toc-h4 toc-link" data-title="state">state</a>
+                                  </li>
+                                  <li>
+                                    <a href="#websocket-api-authenticated-channels-trading-type" class="toc-h4 toc-link" data-title="type">type</a>
+                                  </li>
+                                  <li>
+                                    <a href="#websocket-api-authenticated-channels-trading-timeinforce" class="toc-h4 toc-link" data-title="timeInForce">timeInForce</a>
+                                  </li>
+                                  <li>
+                                    <a href="#websocket-api-authenticated-channels-trading-cancel-on-disconnect" class="toc-h4 toc-link" data-title="Cancel on disconnect">Cancel on disconnect</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-authenticated-channels-create-a-new-order-newordersingle" class="toc-h3 toc-link" data-title="Create a new order (NewOrderSingle)">Create a new order (NewOrderSingle)</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#websocket-api-authenticated-channels-create-a-new-order-newordersingle-examples" class="toc-h4 toc-link" data-title="Examples">Examples</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-authenticated-channels-cancel-an-order-cancelorderrequest" class="toc-h3 toc-link" data-title="Cancel an order (CancelOrderRequest)">Cancel an order (CancelOrderRequest)</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-authenticated-channels-mass-order-cancel-request-ordermasscancelrequest" class="toc-h3 toc-link" data-title="Mass order cancel request (OrderMassCancelRequest)">Mass order cancel request (OrderMassCancelRequest)</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-authenticated-channels-mass-order-status-request-ordermassstatusrequest" class="toc-h3 toc-link" data-title="Mass order status request (OrderMassStatusRequest)">Mass order status request (OrderMassStatusRequest)</a>
+                          </li>
+                          <li>
+                            <a href="#websocket-api-authenticated-channels-balances" class="toc-h3 toc-link" data-title="Balances">Balances</a>
                           </li>
                       </ul>
-                  </li>
-                  <li>
-                    <a href="#ticker" class="toc-h2 toc-link" data-title="Ticker">Ticker</a>
-                  </li>
-                  <li>
-                    <a href="#trades" class="toc-h2 toc-link" data-title="Trades">Trades</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#authenticated-channels" class="toc-h1 toc-link" data-title="Authenticated Channels">Authenticated Channels</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#authenticated" class="toc-h2 toc-link" data-title="Authenticated">Authenticated</a>
-                  </li>
-                  <li>
-                    <a href="#trading" class="toc-h2 toc-link" data-title="Trading">Trading</a>
-                      <ul class="toc-list-h3">
-                          <li>
-                            <a href="#state" class="toc-h3 toc-link" data-title="state">state</a>
-                          </li>
-                          <li>
-                            <a href="#type" class="toc-h3 toc-link" data-title="type">type</a>
-                          </li>
-                          <li>
-                            <a href="#timeinforce" class="toc-h3 toc-link" data-title="timeInForce">timeInForce</a>
-                          </li>
-                          <li>
-                            <a href="#cancel-on-disconnect" class="toc-h3 toc-link" data-title="Cancel on disconnect">Cancel on disconnect</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
-                    <a href="#create-a-new-order-newordersingle" class="toc-h2 toc-link" data-title="Create a new order (NewOrderSingle)">Create a new order (NewOrderSingle)</a>
-                      <ul class="toc-list-h3">
-                          <li>
-                            <a href="#examples" class="toc-h3 toc-link" data-title="Examples">Examples</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
-                    <a href="#cancel-an-order-cancelorderrequest" class="toc-h2 toc-link" data-title="Cancel an order (CancelOrderRequest)">Cancel an order (CancelOrderRequest)</a>
-                  </li>
-                  <li>
-                    <a href="#mass-order-cancel-request-ordermasscancelrequest" class="toc-h2 toc-link" data-title="Mass order cancel request (OrderMassCancelRequest)">Mass order cancel request (OrderMassCancelRequest)</a>
-                  </li>
-                  <li>
-                    <a href="#mass-order-status-request-ordermassstatusrequest" class="toc-h2 toc-link" data-title="Mass order status request (OrderMassStatusRequest)">Mass order status request (OrderMassStatusRequest)</a>
-                  </li>
-                  <li>
-                    <a href="#balances" class="toc-h2 toc-link" data-title="Balances">Balances</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#rest-endpoints" class="toc-h1 toc-link" data-title="REST Endpoints">REST Endpoints</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#query-single-order-status" class="toc-h2 toc-link" data-title="Query single order status">Query single order status</a>
-                  </li>
-                  <li>
-                    <a href="#view-whitelisted-addresses" class="toc-h2 toc-link" data-title="View whitelisted addresses">View whitelisted addresses</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-withdrawal" class="toc-h2 toc-link" data-title="Create A Withdrawal">Create A Withdrawal</a>
                   </li>
               </ul>
           </li>
@@ -371,23 +448,1257 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to Blockchain.com&#39;s Exchange API and developer documentation. These documents detail and give examples of various functionality offered by the API such as receiving real time market data, requesting balance information and performing trades.</p>
+<p>Welcome to Blockchain.com&#39;s Exchange API documentation. These documents detail and give examples of various common tasks such as streaming real time market data, retrieving account information and performing trades.</p>
+<h1 id='generating-api-keys'>Generating API keys</h1>
+<p>Some endpoints require API keys in order to be accessed. Follow these steps to create them:</p>
 
-<p>View the full REST API documentation <a href='https://api.blockchain.com/v3/' target="_blank">here</a>.</p>
-<h2 id='to-get-started'>To Get Started</h2>
-<ul>
-<li>Create or log into your existing Blockchain.com Exchange account.</li>
-<li>Select API from the drop down menu.</li>
-<li>Fill out form and click “Create New API Key Now”.</li>
-<li>Once generated you can view your keys under API Settings.</li>
-</ul>
+<ol>
+<li>Sign into your Blockchain.com Exchange account.</li>
+<li>On the top-right dropdown menu, select &quot;Settings&quot;.</li>
+<li>Scroll down to &quot;API Management&quot; and press &quot;New API Key&quot; - fill out the form and click &quot;Next&quot;.</li>
+<li>Follow the prompt&#39;s instructions to activate your new API key from the email associated to your account.</li>
+</ol>
+
+<p>Once your API key is activated, you&#39;re ready to make authenticated requests!</p>
+<h1 id='rest-api'>REST API</h1><h2 id='rest-api-overview'>Overview</h2>
+<blockquote>
+<p>Example request &amp; response cycle</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">"https://api.blockchain.com/v3/exchange"</span>
+
+<span class="n">symbols</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+  <span class="s">"GET"</span><span class="p">,</span>
+  <span class="n">base_url</span> <span class="o">+</span> <span class="s">"/symbols"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">symbols</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"X-API-Token"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="c"># TODO: Add in your secret API key</span>
+<span class="p">}</span>
+
+<span class="n">place_order</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+  <span class="s">"POST"</span><span class="p">,</span>
+  <span class="n">base_url</span> <span class="o">+</span> <span class="s">"/orders"</span><span class="p">,</span>
+  <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+  <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+    <span class="s">"clOrdId"</span><span class="p">:</span> <span class="s">"123456"</span><span class="p">,</span>
+    <span class="s">"ordType"</span><span class="p">:</span> <span class="s">"LIMIT"</span><span class="p">,</span>
+    <span class="s">"symbol"</span><span class="p">:</span> <span class="s">"ETH-USD"</span><span class="p">,</span>
+    <span class="s">"side"</span><span class="p">:</span> <span class="s">"BUY"</span><span class="p">,</span>
+    <span class="s">"orderQty"</span><span class="p">:</span> <span class="s">"0.1"</span><span class="p">,</span>
+    <span class="s">"price"</span><span class="p">:</span> <span class="s">"100"</span><span class="p">,</span>
+  <span class="p">},</span> <span class="c"># POST request params are passed as a JSON body</span>
+<span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">place_order</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">get_all_orders</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+  <span class="s">"GET"</span><span class="p">,</span>
+  <span class="n">base_url</span> <span class="o">+</span> <span class="s">"/orders"</span><span class="p">,</span>
+  <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+  <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+    <span class="s">"symbol"</span><span class="p">:</span> <span class="s">"ETH-USD"</span><span class="p">,</span>
+    <span class="s">'status'</span><span class="p">:</span> <span class="s">'OPEN'</span>
+  <span class="p">},</span> <span class="c"># Params for GET requests go in the query string</span>
+<span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">get_all_orders</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">cancel_all_orders</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+  <span class="s">"DELETE"</span><span class="p">,</span>
+  <span class="n">base_url</span> <span class="o">+</span> <span class="s">"/orders"</span><span class="p">,</span>
+  <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+  <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+    <span class="s">'symbol'</span><span class="p">:</span> <span class="s">"ETH-USD"</span>
+  <span class="p">}</span> <span class="c"># DELETE request params go in the query string too</span>
+<span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">cancel_all_orders</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre>
+<p><strong>Connection</strong></p>
+
+<p>Currently available environments are:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Base URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>production</td>
+<td><code>https://api.blockchain.com/v3/exchange</code></td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Note that for <code>POST</code> requests, parameters are passed in a JSON body, while for <code>GET</code> and <code>DELETE</code> these are placed in the query string.
+</aside>
+
+<p><strong>Authentication</strong></p>
+
+<p>Having <a href="#generating-api-keys">generated your API credentials</a>, attach your secret key in a <code>X-API-Token</code> header for any authenticated request.</p>
+<h2 id='rest-api-anonymous-endpoints'>Anonymous Endpoints</h2><h3 id='rest-api-anonymous-endpoints-get-symbols'>Get Symbols</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.blockchain.com/v3/exchange/symbols
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"BTC-USD"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"base_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"counter_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"counter_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_price_increment"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_price_increment_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">29500.1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imbalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"BTC-EUR"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"base_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"counter_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"counter_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_price_increment"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_price_increment_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">27800.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imbalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.004</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"BTC-GBP"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"base_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"counter_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBP"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"counter_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_price_increment"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_price_increment_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">70000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">23157.15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auction_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imbalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05621622</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /symbols</code></p>
+
+<p>Retrieves all available symbols supported by Blockchain.com Exchange.</p>
+
+<p><strong>Parameters</strong></p>
+
+<p>None.</p>
+<h3 id='rest-api-anonymous-endpoints-get-symbol'>Get Symbol</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.blockchain.com/v3/exchange/symbols/BTC-USD
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"base_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"counter_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"counter_currency_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"min_price_increment"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"min_price_increment_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"min_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"min_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"max_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"max_order_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lot_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lot_size_scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"auction_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">29500.1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"auction_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"auction_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"imbalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /symbols/{symbol}</code></p>
+
+<p>Retrieves an individual symbol supported by Blockchain.com Exchange.</p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-anonymous-endpoints-get-l2-orderbook'>Get L2 Orderbook</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.blockchain.com/v3/exchange/l2/BTC-USD
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29117.37</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0346872</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29116.28</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.31219648</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29114.82</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.52035355</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29120.86</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03468304</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29121.95</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.31213569</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29123.4</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.52020025</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /l2/{symbol}</code></p>
+
+<p>Returns an orderbook snapshot for a specific symbol. Each entry in <code>bids</code> and <code>asks</code> is an aggregated price level.</p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-anonymous-endpoints-get-l3-orderbook'>Get L3 Orderbook</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.blockchain.com/v3/exchange/l3/BTC-USD
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29109.59</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03469647</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">844439726977141</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29107.43</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3122914</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">844439726977327</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29107.05</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.52049246</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">844439726977145</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29121.82</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0346819</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">844439726977142</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29121.84</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.31213687</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">844439726977328</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"px"</span><span class="p">:</span><span class="w"> </span><span class="mf">29123.74</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.52019418</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">844439726977146</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /l3/{symbol}</code></p>
+
+<p>Returns an orderbook snapshot for a specific symbol. Each entry in <code>bids</code> and <code>asks</code> represents an order. In contrast with the L2 orderbook, the L3 orderbook contains all individual orders without aggregation.</p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-anonymous-endpoints-get-tickers'>Get Tickers</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.blockchain.com/v3/exchange/tickers
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">29387.44</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"volume_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">28.89521219</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_trade_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">29081.4</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-EUR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">26898.43</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"volume_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.48302417</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_trade_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">26621.63</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH-USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">1841.61</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"volume_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.83513382</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_trade_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">1819.32</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p><code>GET /tickers</code></p>
+
+<p>Retrieves tickers for all symbols supported by Blockchain.com exchange.</p>
+
+<p><strong>Parameters</strong></p>
+
+<p>None.</p>
+<h3 id='rest-api-anonymous-endpoints-get-ticker'>Get Ticker</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.blockchain.com/v3/exchange/tickers/BTC-USD
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">29387.44</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"volume_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">28.89521219</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_trade_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">29081.4</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /tickers/{symbol}</code></p>
+
+<p>Retrieves the ticker for a specific symbol.</p>
+
+<p><strong>Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='rest-api-authenticated-endpoints'>Authenticated Endpoints</h2><h3 id='rest-api-authenticated-endpoints-place-order'>Place order</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orderQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"exOrdId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILLED"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.12345</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastShares"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5678</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">3500.12</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"leavesQty"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cumQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.123345</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"avgPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">345.33</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1592830770594</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates an order.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST /orders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>True</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+<tr>
+<td>ordType</td>
+<td>string</td>
+<td>True</td>
+<td><code>LIMIT</code>, <code>MARKET</code>, <code>STOP</code> or <code>STOPLIMIT</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>string</td>
+<td>True</td>
+<td><code>buy</code> or <code>sell</code></td>
+</tr>
+<tr>
+<td>orderQty</td>
+<td>string</td>
+<td>True</td>
+<td>Order size in terms of base currency.</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>False</td>
+<td>Price at which to fill the order. Required if <code>ordType</code> is not <code>MARKET</code>.</td>
+</tr>
+<tr>
+<td>clOrdId</td>
+<td>string</td>
+<td>True</td>
+<td>Reference ID provided by client. Cannot exceed 20 alphanumeric characters.</td>
+</tr>
+<tr>
+<td>timeInForce</td>
+<td>string</td>
+<td>False</td>
+<td><code>GTC</code>, <code>IOC</code>, <code>FOK</code> or <code>GTD</code></td>
+</tr>
+<tr>
+<td>expireDate</td>
+<td>string</td>
+<td>False</td>
+<td>Expiry date in the format <code>YYYYMMDD</code></td>
+</tr>
+<tr>
+<td>minQty</td>
+<td>string</td>
+<td>False</td>
+<td>Minimum quantity required for <code>IOC</code> orders</td>
+</tr>
+<tr>
+<td>stopPx</td>
+<td>string</td>
+<td>False</td>
+<td>Price at which to trigger a <code>STOPLIMIT</code> order</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-cancel-order'>Cancel order</h3>
+<p>Cancels an open order.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>DELETE /orders/{orderId}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orderId</td>
+<td>True</td>
+<td>Exchange-assigned order ID.</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-cancel-all-orders'>Cancel all orders</h3>
+<p>Cancels all open orders.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>DELETE /orders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>False</td>
+<td>If specified, will cancel all orders only for that symbol</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-get-order'>Get order</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">21745988181</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gwOrderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2789221636</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d7402f75314a4cf1webd"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH-BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orderQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cumQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.015797</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"stopPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cancelled"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="mi">20200414</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"execID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"537374697"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"avgPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Gets a specific order by its ID.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /orders/{orderId}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orderId</td>
+<td>Exchange-assigned order ID.</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-get-all-orders'>Get all orders</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42393cc5882b47f5webd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPEN"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exOrdId"</span><span class="p">:</span><span class="w"> </span><span class="mi">528318716822</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">28700.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastShares"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1713819</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">28700.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"leavesQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1713819</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cumQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avgPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1689094384009</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Retrieves a list of orders.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /internal/orders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+<tr>
+<td>from</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><code>OPEN</code>, <code>REJECTED</code>, <code>CANCELED</code>, <code>FILLED</code>, <code>PART_FILLED</code>, <code>EXPIRED</code>, <code>PENDING</code></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Maximum result count to return in a single call. Defaults to <code>100</code>.</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-get-all-orders-from-the-matching-engine'>Get all orders (from the matching engine)</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"nextOrderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orders"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"exOrdId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILLED"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.12345</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastShares"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5678</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">3500.12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"leavesQty"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cumQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.123345</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"avgPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">345.33</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1592830770594</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieves all orders directly from the matching engine.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /internal/orders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+<tr>
+<td>from</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Maximum result count to return in a single call. Defaults to <code>100</code>.</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-get-trades'>Get trades</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"exOrdId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILLED"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.12345</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastShares"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5678</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">3500.12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"leavesQty"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cumQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.123345</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avgPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">345.33</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1592830770594</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns filled orders, including partial fills. Returns at most 100 results - use the returned timestamp to paginate for further results.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /trades</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+<tr>
+<td>from</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Maximum result count to return in a single call. Defaults to <code>100</code>.</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-get-fills'>Get fills</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"exOrdId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tradeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"execId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11111111</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.12345</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1592830770594</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Retrieves individual fills. Returns at most 1000 results - use the returned timestamp and execId to navigate.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /fills</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>e.g <code>BTC-USD</code>, <code>BTC-EUR</code>, <code>ETH-USD</code></td>
+</tr>
+<tr>
+<td>from</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>fromExecId</td>
+<td>List from ExecId onwards.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Epoch timestamp in milliseconds.</td>
+</tr>
+<tr>
+<td>toExecId</td>
+<td>List from ExecId backwards.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Maximum result count to return in a single call. Defaults to <code>1000</code>.</td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-authenticated-endpoints-get-fee-level'>Get fee level</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"makerRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0014</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"takerRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0024</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"volumeInUSD"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Gets the current fee level for the account.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /fees</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<p>None.</p>
+<h1 id='rest-api-v2'>REST API V2</h1><h2 id='rest-api-v2-overview'>Overview</h2>
+<blockquote>
+<p>Example response &amp; request cycle</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">"http://10.103.50.44:8000"</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s">"POST"</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s">"/public/exchange/v4/authenticated/newOrder"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+    <span class="n">method</span><span class="p">,</span>
+    <span class="n">base_url</span> <span class="o">+</span> <span class="n">path</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+        <span class="s">"symbol"</span><span class="p">:</span> <span class="s">"BTC-USD"</span><span class="p">,</span>
+        <span class="s">"side"</span><span class="p">:</span> <span class="s">"BUY"</span><span class="p">,</span>
+        <span class="s">"PRICE"</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span>
+        <span class="s">"quantity"</span><span class="p">:</span> <span class="s">"0.001"</span><span class="p">,</span>
+        <span class="s">"ordType"</span><span class="p">:</span> <span class="s">"LIMIT"</span><span class="p">,</span>
+        <span class="s">"timeInForce"</span><span class="p">:</span> <span class="s">"GTC"</span><span class="p">,</span>
+        <span class="s">"clOrdId"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s">"X-BCX-APIKEY"</span><span class="p">:</span> <span class="s">"eyJhbGciOiJFUzI1NiIsInR5cCI6IkFQSSJ9.eyJhdWQiOiJtZXJjdXJ5IiwidWlkIjoiODE4ZDkzMjEtMGM4ZC00MmQzLTgzM2QtZjA3YTcyMDk4M2QyIiwiaXNzIjoiYmxvY2tjaGFpbiIsInJkbyI6ZmFsc2UsImlhdCI6MTY4MzA0NDkzOSwianRpIjoiNDhiZDAyZjMtMzk2Ni00MjlhLWI3NmQtMzQwYTY3ZTZmMzkwIiwic2VxIjoxMDIxNDY2MCwid2RsIjp0cnVlfQ.H3weH51EfqRvnyR3Z/LsYtfsHIZQ14LORs8MSG+fEALPBcHD/A3Ie6b21fcURkEM8aidVCpYP/4HTdFMFPPcuZc="</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+</code></pre>
+<p><strong>Connection</strong></p>
+
+<p>Currently available environments are:</p>
+
+<table><thead>
+<tr>
+<th>Environment</th>
+<th>URI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>dev</td>
+<td><code>http://10.103.50.44:8000</code></td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Note that for <code>POST</code> requests, parameters are passed in a JSON body, while for <code>GET</code> and <code>DELETE</code> these are placed in the query string.
+</aside>
+
+<p><strong>Authentication</strong></p>
+
+<p>Having <a href="#generating-api-keys">generated your API credentials</a>, attach your secret key in a <code>X-BCX-APIKEY</code> header for any authenticated request.</p>
+<h2 id='rest-api-v2-authenticated-endpoints'>Authenticated endpoints</h2><h3 id='rest-api-v2-authenticated-endpoints-send-order'>Send order</h3>
+<p>Sends in a new order.</p>
+
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"PRICE"</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"288654242695"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001000000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"executedQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20000.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691592745735733"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"selfTradePreventionMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DECREMENT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NEW"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20231112"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"transactTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691592745736"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST /public/exchange/v4/authenticated/newOrder</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>True</td>
+<td>e.g <code>BTC-USD</code>, <code>ETH-USD</code> or <code>BTC-EUR</code></td>
+</tr>
+<tr>
+<td>ordType</td>
+<td>string</td>
+<td>True</td>
+<td><code>MARKET</code>, <code>LIMIT</code>, <code>STOP</code>, <code>STOPLIMIT</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>string</td>
+<td>False</td>
+<td><code>BUY</code>, <code>SELL</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>False</td>
+<td>Required if <code>ordType</code> is not <code>MARKET</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>timeInForce</td>
+<td>string</td>
+<td>True</td>
+<td><code>GTC</code>, <code>IOC</code>, <code>FOK</code>, <code>GTD</code></td>
+</tr>
+<tr>
+<td>selfTakerPreventionMode</td>
+<td>string</td>
+<td>False</td>
+<td><code>EXPIRE_TAKER</code>, <code>EXPIRE_MAKER</code>, <code>EXPIRE_BOTH</code>, <code>DECREMENT</code>, <code>NONE</code></td>
+</tr>
+<tr>
+<td>clOrdId</td>
+<td>string</td>
+<td>False</td>
+<td>If not present, will be automatically generated</td>
+</tr>
+</tbody></table>
+
+<p>Possible values for <code>ordType</code> are explained below:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>LIMIT</code></td>
+<td>Will match at a specific price.</td>
+</tr>
+<tr>
+<td><code>MARKET</code></td>
+<td>Will match at any price, starting from the best bid or offer up until the order is fully filled.</td>
+</tr>
+<tr>
+<td><code>STOP</code></td>
+<td>Triggers a market order once the stop/trigger price is reached.</td>
+</tr>
+<tr>
+<td><code>STOPLIMIT</code></td>
+<td>Triggers a limit order once the stop/trigger price is reached.</td>
+</tr>
+</tbody></table>
+
+<p>Possible values for <code>timeInForce</code> are explained below:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>GTC</code></td>
+<td>Good Till Cancel. The order will rest on the order book until it is cancelled or filled</td>
+</tr>
+<tr>
+<td><code>GTD</code></td>
+<td>Good Till Date. The order will rest on the order book until it is cancelled, filled, or expired</td>
+</tr>
+<tr>
+<td><code>FOK</code></td>
+<td>Fill or Kill. The order will be completely filled or cancelled. No partial fills are permitted.</td>
+</tr>
+<tr>
+<td><code>IOC</code></td>
+<td>Immediate or Cancel. The order will be completely filled, partially filled and the remaining quantity canceled, or canceled.</td>
+</tr>
+</tbody></table>
+
+<p>Supported <code>timeInForce</code> values by <code>ordType</code> are as follows:</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th><code>MARKET</code></th>
+<th><code>LIMIT</code></th>
+<th><code>STOP</code></th>
+<th><code>STOPLIMIT</code></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>GTC</code></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td><code>GTD</code></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td><code>IOC</code></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>FOK</code></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p>Where an &quot;X&quot; denotes support.</p>
+<h3 id='rest-api-v2-authenticated-endpoints-get-all-orders'>Get all orders</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orders"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NEW"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1692368855033"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"avgPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1692368855032905"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20231121"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastExecutionPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastExecutionQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"remainingQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"288654243403"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"stopPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tradeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieves all open orders.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>GET /public/exchange/v4/authenticated/getOpenOrders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<p>None.</p>
+<h3 id='rest-api-v2-authenticated-endpoints-cancel-order'>Cancel order</h3>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"288654242809"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"origClientOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691675705931441"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691675705931441"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"288654242809"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC-USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001000000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"executedQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20000.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691675705931441"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"selfTradePreventionMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DECREMENT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CANCELED"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20231113"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"transactTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691675736366"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Cancels an open order. It will return the cancelled order.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST /public/exchange/v4/authenticated/cancel</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>True</td>
+<td>e.g <code>BTC-USD</code>, <code>ETH-USD</code> or <code>BTC-EUR</code></td>
+</tr>
+<tr>
+<td>orderId</td>
+<td>string</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>origClientOrderId</td>
+<td>string</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>clOrdId</td>
+<td>string</td>
+<td>True</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='rest-api-v2-authenticated-endpoints-cancel-all-orders'>Cancel all orders</h3>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"canceledOrders"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"288654242811"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001000000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"executedQty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20000.0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691676195541120"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"selfTradePreventionMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DECREMENT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CANCELED"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20231113"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1691676202490"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Cancels all open orders. It will return an array of all orders cancelled.</p>
+
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST /public/exchange/v4/authenticated/cancelAll</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<p>None.</p>
 <h1 id='websocket-api'>Websocket API</h1>
 <p>The Websocket API can be used to receive market data and to interact with the trading system in real time. Every message is in a JSON format and trading messages use the FIX standard for naming of fields, and message types.</p>
 
 <p>Each type of data is provided over a dedicated channel. Clients need to subscribe to all relevant channels they wish to receive real time updates from.</p>
-<h2 id='authentication'>Authentication</h2><pre class="highlight python tab-python"><code><span class="c"># Simple python websocket client</span>
+<h2 id='websocket-api-overview'>Overview</h2><h3 id='websocket-api-overview-authentication'>Authentication</h3><pre class="highlight python tab-python"><code><span class="c"># Simple Python-based WebSocket client</span>
 <span class="c"># https://github.com/websocket-client/websocket-client</span>
 <span class="kn">from</span> <span class="nn">websocket</span> <span class="kn">import</span> <span class="n">create_connection</span>
+
 <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">options</span><span class="p">[</span><span class="s">'origin'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'https://exchange.blockchain.com'</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">"wss://ws.blockchain.info/mercury-gateway/v1/ws"</span>
@@ -405,8 +1716,8 @@
 <p>Interaction with the API will require an API key. To generate one, go to the <a href="https://exchange.blockchain.com/settings/api">API section</a> of your Blockchain.com Exchange user settings. Each API key generated will be linked to your account. The only required information is a key name. Optionally you can set trading access, and IP address whitelisting.</p>
 
 <p>Once your key is created you&#39;ll be shown an <strong>API Key</strong> and <strong>API Secret</strong>. Store the secret in a safe place because it will only be shown once.</p>
-<h2 id='connection'>Connection</h2>
-<p>The websocket endpoint is,</p>
+<h3 id='websocket-api-overview-connection'>Connection</h3>
+<p>Currently available WebSocket endpoints are:</p>
 
 <table><thead>
 <tr>
@@ -415,12 +1726,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>prod</td>
+<td>production</td>
 <td><code>wss://ws.blockchain.info/mercury-gateway/v1/ws</code></td>
 </tr>
 </tbody></table>
 
-<p>In order to connect you have to add the following headers to the connection request</p>
+<p>In order to connect you, add the following headers to the connection request:</p>
 
 <table><thead>
 <tr>
@@ -429,13 +1740,13 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>prod</td>
+<td>production</td>
 <td><code>Origin: https://exchange.blockchain.com</code></td>
 </tr>
 </tbody></table>
-<h2 id='requests'>Requests</h2>
-<p>Each Message sent to the server will have at least 2 fields: action and channel.</p>
-<h3 id='channel'>Channel</h3>
+<h3 id='websocket-api-overview-requests'>Requests</h3>
+<p>Each message sent to the server will have at least 2 fields: action and channel.</p>
+<h4 id='websocket-api-overview-requests-channel'>Channel</h4>
 <p>A channel provides context about the type of data being communicated between the client and server. There are multiple channels available:</p>
 
 <table><thead>
@@ -496,7 +1807,7 @@
 <td>Submit &amp; cancel orders, receive order snapshots and updates</td>
 </tr>
 </tbody></table>
-<h3 id='action'>Action</h3>
+<h4 id='websocket-api-overview-requests-action'>Action</h4>
 <p><code>action</code> describes what action to take for the provided channel. The following standard action&#39;s are supported by all channels (with the exception of the auth channel):</p>
 
 <table><thead>
@@ -516,9 +1827,9 @@
 </tbody></table>
 
 <p>A channel may expose other bespoke actions.</p>
-<h2 id='response'>Response</h2><h3 id='sequence-numbers'>Sequence Numbers</h3>
+<h3 id='websocket-api-overview-response'>Response</h3><h4 id='websocket-api-overview-response-sequence-numbers'>Sequence Numbers</h4>
 <p>Each message sent from the server will contain a sequence number <code>seqnum</code> which will be incremented by 1 with each message. If the client receives a <code>seqnum</code> which has skipped one or more sequences, it indicates that a message was missed and the client is recommended to restart the websocket connection.</p>
-<h3 id='event'>Event</h3>
+<h4 id='websocket-api-overview-response-event'>Event</h4>
 <p>In addition, each response field will contain an event field with the corresponding channel to indicate the purpose of the message. The following events are supported:</p>
 
 <table><thead>
@@ -556,7 +1867,7 @@
 </tbody></table>
 
 <p>Each time an <code>action</code> is applied to a channel, an administrative event is sent from the server to notify whether the <code>action</code> was applied successfully.</p>
-<h2 id='data-types'>Data Types</h2>
+<h3 id='websocket-api-overview-data-types'>Data Types</h3>
 <p>All Messages use the standard JSON format. The following data types are supported:</p>
 
 <table><thead>
@@ -582,15 +1893,15 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='fair-usage-and-rate-limits'>Fair usage and rate limits</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h3 id='websocket-api-overview-fair-usage-and-rate-limits'>Fair usage and rate limits</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rejected"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Connection throttling enabled, your messages will be ignored."</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Currently there is a limit of 1200 messages per minute. If the limit is exceeded, you will receive a <code>rejected</code> event. After waiting a minute, normal functionality will resume and you will be able to send messages again.</p>
-<h2 id='response-data-throttling-and-delays'>Response data throttling and delays</h2>
+<h3 id='websocket-api-overview-response-data-throttling-and-delays'>Response data throttling and delays</h3>
 <p>The response and update messages are never delayed, clients will get every update as soon as it happens.</p>
-<h1 id='anonymous-channels'>Anonymous Channels</h1><h2 id='heartbeat'>Heartbeat</h2>
+<h2 id='websocket-api-anonymous-channels'>Anonymous Channels</h2><h3 id='websocket-api-anonymous-channels-heartbeat'>Heartbeat</h3>
 <blockquote>
 <p>Subscribe to channel:</p>
 </blockquote>
@@ -623,7 +1934,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Snapshot messages are sent every 5 seconds and have the following format:</p>
-<h2 id='l2-order-book'>L2 Order Book</h2>
+<h3 id='websocket-api-anonymous-channels-l2-order-book'>L2 Order Book</h3>
 <blockquote>
 <p>Subscribe to channel:</p>
 </blockquote>
@@ -714,7 +2025,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='l3-order-book'>L3 Order Book</h2>
+</span></code></pre><h3 id='websocket-api-anonymous-channels-l3-order-book'>L3 Order Book</h3>
 <blockquote>
 <p>Subscribe to channel:</p>
 </blockquote>
@@ -802,7 +2113,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='prices'>Prices</h2>
+</span></code></pre><h3 id='websocket-api-anonymous-channels-prices'>Prices</h3>
 <blockquote>
 <p>Subscribe to channel:</p>
 </blockquote>
@@ -843,13 +2154,13 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>The price data is an array consisting of [<code>timestamp</code>, <code>open</code>, <code>high</code>, <code>low</code>, <code>close</code>, <code>volume</code>]</p>
-<h2 id='symbols'>Symbols</h2>
+<h3 id='websocket-api-anonymous-channels-symbols'>Symbols</h3>
 <p>To receive symbol updates, subscribe to the <code>symbols</code> channel. The server will send confirmation of the subscription. The next message on this channel will be a snapshot of the current <code>symbol</code> status.</p>
 
 <p>When the <code>symbol</code> is not halted the auction data in the message may be blank.</p>
 
 <p>When a <code>symbol</code> is in a halt state the auction data will populate as the book builds. When an opening time has been chosen, the <code>auction-time</code> field will show the opening time. Subsequent updates will be sent only if the <code>symbol</code> status changes in any way.</p>
-<h3 id='field-description'>Field Description</h3>
+<h4 id='websocket-api-anonymous-channels-symbols-field-description'>Field Description</h4>
 <table><thead>
 <tr>
 <th>Field</th>
@@ -1075,7 +2386,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"imbalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.5</span><span class="p">,</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"halt"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='ticker'>Ticker</h2>
+</span></code></pre><h3 id='websocket-api-anonymous-channels-ticker'>Ticker</h3>
 <blockquote>
 <p>Subscribe to channel:</p>
 </blockquote>
@@ -1108,7 +2419,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"volume_24h"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3015</span><span class="p">,</span><span class="w">
   </span><span class="s2">"last_trade_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">5000.0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='trades'>Trades</h2>
+</span></code></pre><h3 id='websocket-api-anonymous-channels-trades'>Trades</h3>
 <p>In order to receive trade updates on executions within each market across the Exchange, you can subscribe to the <code>trades</code> channel.</p>
 
 <blockquote>
@@ -1144,7 +2455,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">11252.4</span><span class="p">,</span><span class="w">
   </span><span class="s2">"trade_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12884909920"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='authenticated-channels'>Authenticated Channels</h1><h2 id='authenticated'>Authenticated</h2>
+</span></code></pre><h2 id='websocket-api-authenticated-channels'>Authenticated Channels</h2><h3 id='websocket-api-authenticated-channels-authenticated'>Authenticated</h3>
 <p>To authenticate a web socket connection, the client must subscribe to the <code>auth</code> channel passing a token field. Alternatively a client can provide the header cookie <code>auth_token</code> on a new connection and then authentication will take place immediately without the need to subscribing to <code>auth</code> channel.</p>
 
 <blockquote>
@@ -1165,7 +2476,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"auth"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Authentication Failed"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='trading'>Trading</h2>
+</span></code></pre><h3 id='websocket-api-authenticated-channels-trading'>Trading</h3>
 <p>The client can submit and cancel orders, as well as receive order executions, through the <code>trading</code> channel. The messages are in JSON format and the attribute names are using standardised FIX 4.2 Field names.</p>
 
 <p>Below is a table showing the permitted FIX fields used as a JSON key for cancelling / creating an order:</p>
@@ -1449,7 +2760,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 <td>&quot;77309432596&quot;</td>
 </tr>
 </tbody></table>
-<h3 id='state'>state</h3>
+<h4 id='websocket-api-authenticated-channels-trading-state'>state</h4>
 <p>Enumerated fields are defined as follows:</p>
 
 <table><thead>
@@ -1495,7 +2806,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 <td></td>
 </tr>
 </tbody></table>
-<h3 id='type'>type</h3>
+<h4 id='websocket-api-authenticated-channels-trading-type'>type</h4>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -1519,7 +2830,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 <td>order which has a stop price and limit price, and when the stop price is reached, it triggers a limit order at the limit price</td>
 </tr>
 </tbody></table>
-<h3 id='timeinforce'>timeInForce</h3>
+<h4 id='websocket-api-authenticated-channels-trading-timeinforce'>timeInForce</h4>
 <blockquote>
 <p>To subscribe:</p>
 </blockquote>
@@ -1662,7 +2973,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 <td>Snapshot of live orders</td>
 </tr>
 </tbody></table>
-<h3 id='cancel-on-disconnect'>Cancel on disconnect</h3>
+<h4 id='websocket-api-authenticated-channels-trading-cancel-on-disconnect'>Cancel on disconnect</h4>
 <p>When subscribing to this channel, users can enable cancel on disconnect. This ensures that when the connection is disconnected, all live orders of the user will be cancelled.</p>
 
 <blockquote>
@@ -1718,7 +3029,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='create-a-new-order-newordersingle'>Create a new order (NewOrderSingle)</h2>
+</span></code></pre><h3 id='websocket-api-authenticated-channels-create-a-new-order-newordersingle'>Create a new order (NewOrderSingle)</h3>
 <blockquote>
 <p>Example creating a GTC limit order:</p>
 </blockquote>
@@ -1792,7 +3103,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='examples'>Examples</h3>
+</span></code></pre><h4 id='websocket-api-authenticated-channels-create-a-new-order-newordersingle-examples'>Examples</h4>
 <blockquote>
 <p>Example of a reply if your market order get filled:</p>
 </blockquote>
@@ -1978,7 +3289,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"tradeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='cancel-an-order-cancelorderrequest'>Cancel an order (CancelOrderRequest)</h2>
+</span></code></pre><h3 id='websocket-api-authenticated-channels-cancel-an-order-cancelorderrequest'>Cancel an order (CancelOrderRequest)</h3>
 <blockquote>
 <p>To cancel order:</p>
 </blockquote>
@@ -2026,7 +3337,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trading"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Internal server error"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='mass-order-cancel-request-ordermasscancelrequest'>Mass order cancel request (OrderMassCancelRequest)</h2>
+</span></code></pre><h3 id='websocket-api-authenticated-channels-mass-order-cancel-request-ordermasscancelrequest'>Mass order cancel request (OrderMassCancelRequest)</h3>
 <blockquote>
 <p>To cancel order:</p>
 </blockquote>
@@ -2045,7 +3356,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Users have the ability to cancel all of their live orders at once by using this action. A symbol can be optionally specified to reduce the scope of this action. After requesting a mass cancel, execution reports for the affected orders will follow.</p>
-<h2 id='mass-order-status-request-ordermassstatusrequest'>Mass order status request (OrderMassStatusRequest)</h2>
+<h3 id='websocket-api-authenticated-channels-mass-order-status-request-ordermassstatusrequest'>Mass order status request (OrderMassStatusRequest)</h3>
 <blockquote>
 <p>To cancel order:</p>
 </blockquote>
@@ -2055,7 +3366,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Live orders can be listed at any point in time with this request. The subsequent response will contain a snapshot similar to the one received when subscribing to this channel.</p>
-<h2 id='balances'>Balances</h2>
+<h3 id='websocket-api-authenticated-channels-balances'>Balances</h3>
 <blockquote>
 <p>To receive balances for a user, subscribe to the authenticated balances channel:</p>
 </blockquote>
@@ -2146,205 +3457,7 @@ Supported granularity values are: <code>60, 300, 900, 3600, 21600, 86400</code><
   </span><span class="s2">"total_available_local"</span><span class="p">:</span><span class="w"> </span><span class="mf">65.439094168</span><span class="p">,</span><span class="w">
   </span><span class="s2">"total_balance_local"</span><span class="p">:</span><span class="w"> </span><span class="mf">87.657864168</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='rest-endpoints'>REST Endpoints</h1><h2 id='query-single-order-status'>Query single order status</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>GET https://api.blockchain.com/exchange/order/21745988181
-</code></pre>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">21745988181</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gwOrderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2789221636</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"clOrdId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d7402f75314a4cf1webd"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH-BTC"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"ordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"timeInForce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTC"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"orderQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cumQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.015797</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"stopPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"ordStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cancelled"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"expireDate"</span><span class="p">:</span><span class="w"> </span><span class="mi">20200414</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"execID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"537374697"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"avgPx"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
-</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>In order to look up the status of a single order, users can utilize the following endpoint.</p>
-
-<table><thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>URL</td>
-<td>https://api.blockchain.com/exchange/order/{orderId}</td>
-</tr>
-<tr>
-<td>HTTP Method</td>
-<td>GET</td>
-</tr>
-<tr>
-<td>Required headers</td>
-<td>Cookie: auth_token={apiKey}</td>
-</tr>
-</tbody></table>
-
-<p>Users can authenticate using API keys, by providing a cookie named auth_token with the value set to their API key.</p>
-<h2 id='view-whitelisted-addresses'>View whitelisted addresses</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>GET https://api.blockchain.com/exchange/beneficiaries
-</code></pre>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"capabilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"xpub"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"existingBeneficiaryOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"fiat"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"xpub"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"existingBeneficiaryOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"fiat"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"enabledAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-08T11:41:32.664Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"whitelisted"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"298907ac-07df-47ab-93d5-5594e019813b"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"******************************2v7b"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"routingNumber"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Ledger Device"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"whitelisted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"fiat"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>In order to see the list of whitelisted beneficiaries, users can utilize the following endpoint.</p>
-
-<table><thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>URL</td>
-<td>https://api.blockchain.com/exchange/beneficiaries</td>
-</tr>
-<tr>
-<td>HTTP Method</td>
-<td>GET</td>
-</tr>
-<tr>
-<td>Required headers</td>
-<td>Cookie: auth_token={apiKey}</td>
-</tr>
-</tbody></table>
-
-<p>Users can authenticate using API keys, by providing a cookie named auth_token with the value set to their API key.</p>
-<h2 id='create-a-withdrawal'>Create A Withdrawal</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST https://api.blockchain.com/exchange/withdrawals
-</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0001"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"beneficiary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3ff5bc82-b118-45b3-b468-9697be208bdf"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1941fcdd-d16a-4b5a-998e-f58f5862af88"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e9307d88-bd92-4fdf-840c-7e30fbb0bbd7"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MERCURY"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0001"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"fee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0005"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NONE"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>In order to create a withdrawal via api, users can utilize the following endpoint.</p>
-
-<table><thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>URL</td>
-<td>https://api.blockchain.com/exchange/withdrawals</td>
-</tr>
-<tr>
-<td>HTTP Method</td>
-<td>POST</td>
-</tr>
-<tr>
-<td>Required headers</td>
-<td>Cookie: auth_token={apiKey}</td>
-</tr>
-</tbody></table>
-
-<p>Users can authenticate using API keys, by providing a cookie named auth_token with the value set to their API key.</p>
-
-<p><strong>Request Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>currency</td>
-<td>The ticker symbol for the withdrawal currency e.g. &quot;BTC</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>The amount of the withdrawal as a decimal e.g. 1.231</td>
-</tr>
-<tr>
-<td>beneficiary</td>
-<td>The id of your beneficiary for this currency, which can be retrieved by using the /beneficiaries endpoint</td>
-</tr>
-</tbody></table>
-
       </div>
       <div class="dark-box">
           <div class="lang-selector">
